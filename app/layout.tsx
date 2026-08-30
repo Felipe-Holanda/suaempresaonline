@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, IBM_Plex_Mono, Manrope, Syne } from "next/font/google";
+import { Barlow_Condensed, Cormorant_Garamond, IBM_Plex_Mono, Manrope, Syne } from "next/font/google";
 import "./globals.css";
 
 const bodyFont = Manrope({
@@ -30,6 +30,14 @@ const vaultDisplayFont = Syne({
   display: "swap",
 });
 
+const fradeDisplayFont = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-frade-display",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "8Vault Solutions",
   description: "Digitalização, automação e inteligência artificial para empresas locais.",
@@ -42,7 +50,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
-      <body className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} ${vaultDisplayFont.variable}`}>{children}</body>
+      <body className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} ${vaultDisplayFont.variable} ${fradeDisplayFont.variable}`}>{children}</body>
     </html>
   );
 }

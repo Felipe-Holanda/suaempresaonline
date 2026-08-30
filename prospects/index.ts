@@ -3,6 +3,7 @@ import { agrosaul } from "@/prospects/agrosaul/config";
 import { anacletoContabilidade } from "@/prospects/anacleto-contabilidade/config";
 import { anchietaAdvogados } from "@/prospects/anchieta-advogados/config";
 import { equiparLocacao } from "@/prospects/equipar-locacao/config";
+import { grupoFrade } from "@/prospects/grupo-frade/config";
 import type { ProspectBusiness } from "@/prospects/types";
 
 export const prospects: Record<string, ProspectBusiness> = {
@@ -11,6 +12,7 @@ export const prospects: Record<string, ProspectBusiness> = {
   [anacletoContabilidade.slug]: anacletoContabilidade,
   [anchietaAdvogados.slug]: anchietaAdvogados,
   [equiparLocacao.slug]: equiparLocacao,
+  [grupoFrade.slug]: grupoFrade,
 };
 
 export const prospectList = Object.values(prospects);

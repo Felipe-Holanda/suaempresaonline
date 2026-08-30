@@ -8,7 +8,7 @@ import { EquipmentRentalPreview } from "@/components/business/EquipmentRentalPre
 import { getProspect, prospects } from "@/prospects";
 
 export function generateStaticParams() {
-  return Object.keys(prospects).map((slug) => ({ slug }));
+  return Object.keys(prospects).filter((slug) => slug !== "grupo-frade").map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
