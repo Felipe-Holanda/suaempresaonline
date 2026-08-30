@@ -3,7 +3,7 @@ export type ProspectStatus = "DRAFT" | "READY" | "SENT" | "VIEWED" | "INTERESTED
 export interface ProspectBusiness {
   name: string;
   slug: string;
-  category: "AGENCY" | "GENERIC";
+  category: "AGENCY" | "AGRO" | "GENERIC";
   description: string;
   city: string;
   state: string;
@@ -11,6 +11,11 @@ export interface ProspectBusiness {
   foundedAt?: string;
   founders?: string[];
   socialLinks?: { instagram?: string };
+  phone?: string;
+  whatsapp?: string;
+  hours?: Array<{ days: string; time: string }>;
+  delivery?: string;
+  productGroups?: Array<{ title: string; items: string[] }>;
   sourceUrl?: string;
   status: ProspectStatus;
   portfolio: {

@@ -1,0 +1,141 @@
+.agro-site {
+  --green: #075c33;
+  --green-dark: #033c22;
+  --yellow: #f2d20a;
+  --paper: #f1efe5;
+  --white: #fffdf4;
+  --ink: #15241a;
+  --muted: #657067;
+  --ease: cubic-bezier(.2,.8,.2,1);
+  min-height: 100dvh;
+  overflow: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body),sans-serif;
+}
+.agro-site a { touch-action: manipulation; -webkit-tap-highlight-color: rgba(242,210,10,.25); }
+.agro-site a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+.agro-site section[id] { scroll-margin-top: 78px; }
+.agro-skip { position: fixed; top: 8px; left: 8px; z-index: 20; padding: 12px 16px; background: var(--yellow); color: var(--ink); font-weight: 800; transform: translateY(-150%); transition: transform .25s ease; }
+.agro-skip:focus-visible { transform: translateY(0); }
+
+.agro-nav { height: 76px; padding: 0 max(20px,calc((100vw - 1420px)/2)); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; background: var(--white); border-bottom: 1px solid rgba(21,36,26,.14); }
+.agro-brand { width: 245px; height: 64px; display: block; overflow: hidden; transition: opacity .25s ease; }
+.agro-brand:hover { opacity: .75; }
+.agro-brand img { width: 100%; height: 100%; object-fit: contain; }
+.agro-nav nav { display: flex; gap: 30px; }
+.agro-nav nav a { color: var(--muted); font-size: .68rem; font-weight: 700; transition: color .25s ease; }
+.agro-nav nav a:hover { color: var(--green); }
+.agro-nav-action { justify-self: end; min-height: 44px; padding: 0 16px 0 19px; display: inline-flex; align-items: center; gap: 24px; background: var(--green); color: #fff; font-size: .68rem; font-weight: 800; transition: background-color .25s ease,transform .25s var(--ease); }
+.agro-nav-action:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+.agro-hero { position: relative; min-height: calc(100dvh - 76px); display: flex; align-items: flex-end; overflow: hidden; background: var(--green-dark); color: #fff; }
+.agro-hero > img { object-fit: cover; object-position: center; animation: agroHeroIn 1.25s var(--ease) both; }
+.agro-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(2,36,20,.94) 0%,rgba(2,36,20,.68) 35%,rgba(2,36,20,.06) 68%),linear-gradient(0deg,rgba(2,25,14,.35),transparent 55%); }
+.agro-hero-copy { position: relative; z-index: 1; width: min(calc(100% - 64px),1420px); margin: 0 auto; padding: 0 0 74px; }
+.agro-hero-copy > p:first-child { margin: 0 0 23px; color: var(--yellow); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+.agro-hero h1,.agro-products h2,.agro-feed-feature h2,.agro-hardware h2,.agro-delivery h2,.agro-visit h2 { margin: 0; font-family: var(--font-display),sans-serif; font-weight: 800; text-transform: uppercase; text-wrap: balance; }
+.agro-hero h1 { max-width: 650px; font-size: clamp(4.6rem,6.5vw,7.6rem); line-height: .84; letter-spacing: -.03em; }
+.agro-hero-copy > p:nth-of-type(2) { max-width: 500px; margin: 25px 0 0; color: rgba(255,255,255,.76); font-size: .92rem; line-height: 1.65; }
+.agro-button { width: max-content; min-height: 56px; margin-top: 33px; padding: 0 18px 0 21px; display: inline-flex; align-items: center; gap: 28px; background: var(--yellow); color: var(--ink); font-size: .7rem; font-weight: 800; transition: background-color .25s ease,transform .25s var(--ease); }
+.agro-button:hover { background: #ffe52b; transform: translateY(-2px); }
+.agro-button:active,.agro-nav-action:active { transform: scale(.98); }
+
+.agro-service-row { width: min(100%,1420px); margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); background: var(--yellow); }
+.agro-service-row > div { min-height: 112px; padding: 25px 30px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid rgba(21,36,26,.22); }
+.agro-service-row > div:last-child { border-right: 0; }
+.agro-service-row span { margin-bottom: 9px; font-size: .57rem; font-weight: 800; text-transform: uppercase; }
+.agro-service-row strong,.agro-service-row a { font-size: .78rem; font-weight: 800; }
+.agro-service-row a:hover { text-decoration: underline; }
+
+.agro-products { width: min(calc(100% - 64px),1240px); margin: 0 auto; padding: 135px 0 155px; }
+.agro-products-title { max-width: 650px; margin-bottom: 68px; }
+.agro-products h2 { color: var(--green-dark); font-size: clamp(3.3rem,5vw,5.8rem); line-height: .88; letter-spacing: -.025em; }
+.agro-products-title p { max-width: 480px; margin: 20px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.65; }
+.agro-product-list { border-top: 4px solid var(--green); }
+.agro-product-row { min-height: 150px; padding: 25px 0; display: grid; grid-template-columns: .8fr 1fr 54px; gap: 40px; align-items: center; border-bottom: 1px solid rgba(21,36,26,.22); transition: background-color .3s ease,color .3s ease,padding .3s var(--ease); }
+.agro-product-row:hover { padding-inline: 26px; background: var(--yellow); }
+.agro-product-row h3 { margin: 0; color: var(--green-dark); font-family: var(--font-display),sans-serif; font-size: clamp(2.5rem,4vw,4.5rem); line-height: .85; text-transform: uppercase; }
+.agro-product-row p { margin: 0; color: #4f5c52; font-size: .8rem; line-height: 1.65; }
+.agro-product-row > a { width: 48px; height: 48px; display: grid; place-items: center; border: 2px solid var(--green); color: var(--green); font-weight: 800; transition: background-color .25s ease,color .25s ease,transform .25s var(--ease); }
+.agro-product-row > a:hover { background: var(--green); color: #fff; transform: translate(2px,-2px); }
+
+.agro-feed-feature { min-height: 760px; display: grid; grid-template-columns: 1.2fr .8fr; background: var(--yellow); }
+.agro-feed-image { position: relative; min-height: 680px; overflow: hidden; }
+.agro-feed-image img { object-fit: cover; object-position: 55% center; }
+.agro-feed-copy { padding: 90px clamp(34px,6vw,90px); display: flex; flex-direction: column; justify-content: center; }
+.agro-feed-copy > span { margin-bottom: 20px; color: var(--green-dark); font-size: .66rem; font-weight: 800; text-transform: uppercase; }
+.agro-feed-feature h2 { max-width: 520px; color: var(--green-dark); font-size: clamp(4rem,5.7vw,6.5rem); line-height: .84; }
+.agro-feed-copy > p { max-width: 460px; margin: 26px 0 36px; color: #3e492f; font-size: .84rem; line-height: 1.65; }
+.agro-species { display: flex; flex-wrap: wrap; gap: 8px; }
+.agro-species strong { padding: 10px 13px; border: 1px solid rgba(3,60,34,.35); color: var(--green-dark); font-size: .64rem; }
+
+.agro-hardware { width: min(calc(100% - 64px),1420px); margin: 0 auto; padding: 145px 0; display: grid; grid-template-columns: .85fr 1.15fr; gap: 9vw; }
+.agro-hardware h2 { color: var(--green-dark); font-size: clamp(4rem,6.5vw,7.5rem); line-height: .84; }
+.agro-hardware-groups { align-self: end; display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.agro-hardware-groups > div { min-height: 210px; padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; background: #e5e1d2; }
+.agro-hardware-groups > div:nth-child(2) { background: var(--green); color: #fff; }
+.agro-hardware-groups > div:nth-child(3) { background: #d5ddcc; }
+.agro-hardware-groups strong { font-family: var(--font-display),sans-serif; font-size: 1.8rem; text-transform: uppercase; }
+.agro-hardware-groups p { margin: 14px 0 0; color: inherit; opacity: .72; font-size: .72rem; line-height: 1.6; }
+
+.agro-delivery { min-height: 570px; padding: 80px max(32px,calc((100vw - 1420px)/2)); display: grid; grid-template-columns: 1fr auto; align-items: center; overflow: hidden; background: var(--green); color: #fff; }
+.agro-delivery-copy > span { display: block; margin-bottom: 20px; color: var(--yellow); font-size: .66rem; font-weight: 800; text-transform: uppercase; }
+.agro-delivery h2 { max-width: 780px; font-size: clamp(4.2rem,6.8vw,7.8rem); line-height: .84; }
+.agro-delivery a,.agro-visit a { width: max-content; margin-top: 35px; padding-bottom: 6px; display: flex; align-items: center; gap: 22px; border-bottom: 2px solid currentColor; font-size: .72rem; font-weight: 800; transition: color .25s ease; }
+.agro-delivery a:hover { color: var(--yellow); }
+.agro-delivery-mark { margin-right: -4vw; color: rgba(242,210,10,.15); font-family: var(--font-display),sans-serif; font-size: clamp(16rem,30vw,34rem); font-weight: 800; line-height: .6; }
+
+.agro-visit { width: min(calc(100% - 64px),1240px); margin: 0 auto; padding: 145px 0; display: grid; grid-template-columns: 1fr .7fr; gap: 11vw; }
+.agro-visit h2 { color: var(--green-dark); font-size: clamp(3.8rem,5.8vw,6.5rem); line-height: .86; }
+.agro-visit address { max-width: 500px; margin-top: 28px; color: var(--muted); font-size: .84rem; font-style: normal; line-height: 1.7; }
+.agro-visit a:hover { color: var(--green); }
+.agro-hours { align-self: end; padding: 30px; background: var(--white); box-shadow: 12px 12px 0 var(--yellow); }
+.agro-hours h3 { margin: 0 0 20px; color: var(--green-dark); font-family: var(--font-display),sans-serif; font-size: 2rem; text-transform: uppercase; }
+.agro-hours p { margin: 0; padding: 13px 0; display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid rgba(21,36,26,.16); font-size: .72rem; font-variant-numeric: tabular-nums; }
+.agro-hours p span { color: var(--muted); }
+.agro-footer { min-height: 190px; padding: 42px max(32px,calc((100vw - 1420px)/2)); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 55px; align-items: center; background: var(--white); border-top: 1px solid rgba(21,36,26,.14); color: var(--muted); font-size: .65rem; line-height: 1.7; }
+.agro-footer img { width: 245px; height: 74px; object-fit: contain; }
+
+@keyframes agroHeroIn { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 960px) {
+  .agro-nav { grid-template-columns: 1fr auto; }
+  .agro-nav nav { display: none; }
+  .agro-feed-feature { grid-template-columns: 1fr 1fr; }
+  .agro-hardware { grid-template-columns: 1fr; gap: 60px; }
+}
+@media (max-width: 700px) {
+  .agro-nav { height: 70px; padding-inline: 14px; }
+  .agro-brand { width: 180px; height: 54px; }
+  .agro-nav-action { min-width: 44px; padding: 0; justify-content: center; font-size: 0; }
+  .agro-hero { min-height: calc(100dvh - 70px); }
+  .agro-hero > img { object-position: 64% center; }
+  .agro-hero-shade { background: linear-gradient(0deg,rgba(2,36,20,.96) 0%,rgba(2,36,20,.72) 55%,rgba(2,36,20,.05) 90%); }
+  .agro-hero-copy { width: calc(100% - 32px); padding-bottom: 54px; }
+  .agro-hero h1 { max-width: 390px; font-size: clamp(4.2rem,19vw,5.8rem); }
+  .agro-hero-copy > p:nth-of-type(2) { max-width: 340px; }
+  .agro-button { width: 100%; justify-content: space-between; }
+  .agro-service-row { grid-template-columns: 1fr; }
+  .agro-service-row > div { min-height: 92px; border-right: 0; border-bottom: 1px solid rgba(21,36,26,.22); }
+  .agro-products,.agro-hardware,.agro-visit { width: calc(100% - 32px); }
+  .agro-products { padding: 105px 0 120px; }
+  .agro-products-title { margin-bottom: 50px; }
+  .agro-product-row { min-height: 190px; grid-template-columns: 1fr 46px; gap: 14px 20px; }
+  .agro-product-row h3 { font-size: 3rem; }
+  .agro-product-row p { grid-column: 1/-1; grid-row: 2; }
+  .agro-product-row > a { grid-column: 2; grid-row: 1; width: 44px; height: 44px; }
+  .agro-product-row:hover { padding-inline: 12px; }
+  .agro-feed-feature { grid-template-columns: 1fr; }
+  .agro-feed-image { min-height: 520px; }
+  .agro-feed-copy { padding: 85px 16px 100px; }
+  .agro-feed-feature h2,.agro-hardware h2,.agro-delivery h2,.agro-visit h2 { font-size: clamp(3.8rem,17vw,5.4rem); }
+  .agro-hardware { padding: 110px 0; }
+  .agro-hardware-groups { grid-template-columns: 1fr; }
+  .agro-hardware-groups > div { min-height: 180px; }
+  .agro-delivery { min-height: 690px; padding: 90px 16px; grid-template-columns: 1fr; }
+  .agro-delivery-mark { align-self: end; justify-self: end; margin: 0 -12vw -10px 0; font-size: 17rem; }
+  .agro-visit { padding: 110px 0; grid-template-columns: 1fr; gap: 75px; }
+  .agro-hours { padding: 24px; box-shadow: 8px 8px 0 var(--yellow); }
+  .agro-footer { padding: 60px 16px; grid-template-columns: 1fr; gap: 25px; }
+}
+@media (prefers-reduced-motion: reduce) { .agro-hero > img { animation: none; } }
