@@ -7,7 +7,7 @@ function BoxIcon({ name }: { name: string }) {
 }
 
 function Arrow() {
-  return <BoxIcon name="bx-up-right-arrow-alt" />;
+  return <BoxIcon name="bx-right-arrow-alt" />;
 }
 
 export function LawPreview({ business }: { business: ProspectBusiness }) {

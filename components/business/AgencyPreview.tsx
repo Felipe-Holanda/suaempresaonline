@@ -3,7 +3,7 @@ import type { ProspectBusiness } from "@/prospects";
 import { Reveal } from "@/components/ui/Reveal";
 
 function Arrow() {
-  return <span className="cta-icon" aria-hidden="true"><i className="bx bx-up-right-arrow-alt" aria-hidden="true" /></span>;
+  return <span className="cta-icon" aria-hidden="true"><i className="bx bx-right-arrow-alt" aria-hidden="true" /></span>;
 }
 
 export function AgencyPreview({ business }: { business: ProspectBusiness }) {
@@ -38,7 +38,7 @@ export function AgencyPreview({ business }: { business: ProspectBusiness }) {
           <p className="hero-lede">Estratégia, posicionamento e publicidade para negócios que querem liderar o Bico do Papagaio.</p>
           <div className="hero-actions">
             <a className="premium-button" href="#atuacao">Ver a direção <Arrow /></a>
-            {instagram ? <a className="quiet-link" href={instagram} target="_blank" rel="noreferrer">Conhecer a Wei no Instagram</a> : null}
+            {instagram ? <a className="quiet-link" href={instagram} target="_blank" rel="noreferrer">Conhecer a Wei no Instagram <i className="bx bx-link-external" aria-hidden="true" /></a> : null}
           </div>
         </div>
         <div className="hero-signature" aria-label="Agência fundada em 2024, em Augustinópolis, Tocantins">

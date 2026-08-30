@@ -32,7 +32,7 @@
 .accounting-nav nav a { color: var(--accounting-muted); font-size: .69rem; transition: color .25s ease; }
 .accounting-nav nav a:hover { color: var(--accounting-blue); }
 .accounting-contact-link { justify-self: end; display: inline-flex; align-items: center; gap: 10px; color: var(--accounting-blue-deep); font-family: var(--font-mono), monospace; font-size: .61rem; transition: color .25s ease; }
-.accounting-contact-link i { width: 7px; height: 7px; display: inline-block; background: var(--accounting-orange); border-radius: 50%; }
+.accounting-contact-link > i { color: var(--accounting-orange); font-size: 1rem; }
 .accounting-contact-link span { font-size: 1rem; transition: transform .25s var(--accounting-ease); }
 .accounting-contact-link:hover { color: var(--accounting-orange); }
 .accounting-contact-link:hover span { transform: translate(3px,-3px); }

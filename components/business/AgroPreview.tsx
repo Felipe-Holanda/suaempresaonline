@@ -3,7 +3,7 @@ import type { ProspectBusiness } from "@/prospects";
 import { Reveal } from "@/components/ui/Reveal";
 
 function Arrow() {
-  return <span aria-hidden="true"><i className="bx bx-up-right-arrow-alt" aria-hidden="true" /></span>;
+  return <span aria-hidden="true"><i className="bx bx-right-arrow-alt" aria-hidden="true" /></span>;
 }
 
 export function AgroPreview({ business }: { business: ProspectBusiness }) {
