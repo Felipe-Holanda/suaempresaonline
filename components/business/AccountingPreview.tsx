@@ -3,7 +3,7 @@ import type { ProspectBusiness } from "@/prospects";
 import { Reveal } from "@/components/ui/Reveal";
 
 function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+  return <span aria-hidden="true"><i className="bx bx-up-right-arrow-alt" aria-hidden="true" /></span>;
 }
 
 export function AccountingPreview({ business }: { business: ProspectBusiness }) {
@@ -35,7 +35,7 @@ export function AccountingPreview({ business }: { business: ProspectBusiness }) 
           <p className="accounting-hero-lede">Apoio contábil para quem precisa enxergar a empresa com mais segurança, da abertura às escolhas que sustentam o crescimento.</p>
           <div className="accounting-hero-actions">
             <a className="accounting-text-cta" href={phoneUrl}>Falar com o escritório <Arrow /></a>
-            <a className="accounting-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">◌</span> Chamar no WhatsApp</a>
+            <a className="accounting-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer"><i className="bx bxl-whatsapp" aria-hidden="true" /> Chamar no WhatsApp</a>
           </div>
         </div>
         <div className="accounting-hero-media">
@@ -102,7 +102,7 @@ export function AccountingPreview({ business }: { business: ProspectBusiness }) 
           <h2>Vamos colocar a próxima decisão no papel?</h2>
           <div className="accounting-contact-actions">
             <a className="accounting-text-cta" href={phoneUrl}>Ligar para o escritório <Arrow /></a>
-            <a className="accounting-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">◌</span> Chamar no WhatsApp</a>
+            <a className="accounting-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer"><i className="bx bxl-whatsapp" aria-hidden="true" /> Chamar no WhatsApp</a>
           </div>
         </div>
         <address>

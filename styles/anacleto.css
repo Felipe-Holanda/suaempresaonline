@@ -51,7 +51,7 @@
 .accounting-text-cta:hover { border-color: var(--accounting-orange); color: var(--accounting-orange); transform: translateX(3px); }
 .accounting-text-cta:hover span { transform: translate(3px,-3px); }
 .accounting-whatsapp { min-height: 42px; margin-top: 32px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #24845c; color: #176b49; font-family: var(--font-mono), monospace; font-size: .61rem; font-weight: 500; transition: background-color .25s ease, color .25s ease, transform .25s var(--accounting-ease); }
-.accounting-whatsapp > span { font-size: 1.15rem; line-height: 0; }
+.accounting-whatsapp > i { color: #1e8056; font-size: 1.15rem; line-height: 0; }
 .accounting-whatsapp:hover { background: #176b49; color: #fff; transform: translateY(-2px); }
 .accounting-hero-media { position: relative; min-height: 570px; overflow: hidden; background: var(--accounting-blue-deep); box-shadow: 18px 18px 0 var(--accounting-paper-deep); }
 .accounting-hero-media img { object-fit: cover; object-position: 58% center; filter: saturate(.78) contrast(1.04); animation: accountingImageIn 1.3s var(--accounting-ease) both; }

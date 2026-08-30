@@ -3,7 +3,7 @@ import type { ProspectBusiness } from "@/prospects";
 import { Reveal } from "@/components/ui/Reveal";
 
 function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+  return <span aria-hidden="true"><i className="bx bx-up-right-arrow-alt" aria-hidden="true" /></span>;
 }
 
 export function AgroPreview({ business }: { business: ProspectBusiness }) {
@@ -24,7 +24,7 @@ export function AgroPreview({ business }: { business: ProspectBusiness }) {
           <a href="#entrega">Entrega</a>
           <a href="#loja">Localização</a>
         </nav>
-        <a className="agro-nav-action" href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp <Arrow /></a>
+        <a className="agro-nav-action" href={whatsappUrl} target="_blank" rel="noreferrer"><i className="bx bxl-whatsapp" aria-hidden="true" /> WhatsApp <Arrow /></a>
       </header>
 
       <section className="agro-hero" id="conteudo">
@@ -34,7 +34,7 @@ export function AgroPreview({ business }: { business: ProspectBusiness }) {
           <p>Rações, ferragens e ferramentas</p>
           <h1>Tudo que move o campo.</h1>
           <p>Produtos para criar, produzir, consertar e continuar o trabalho.</p>
-          <a className="agro-button" href={whatsappUrl} target="_blank" rel="noreferrer">Consultar no WhatsApp <Arrow /></a>
+          <a className="agro-button" href={whatsappUrl} target="_blank" rel="noreferrer"><i className="bx bxl-whatsapp" aria-hidden="true" /> Consultar no WhatsApp <Arrow /></a>
         </div>
       </section>
 

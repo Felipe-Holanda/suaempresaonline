@@ -18,7 +18,7 @@ export function ProjectGrid({ projects }: { projects: ProspectBusiness[] }) {
             <h2>{project.portfolio.title}</h2>
             <p>{project.portfolio.summary}</p>
           </div>
-          <span className="project-card-arrow" aria-hidden="true">↗</span>
+          <span className="project-card-arrow" aria-hidden="true"><i className="bx bx-up-right-arrow-alt" aria-hidden="true" /></span>
         </Link>
       ))}
     </div>

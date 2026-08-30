@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 
 function Arrow() {
-  return <span className="vault-arrow" aria-hidden="true">↗</span>;
+  return <span className="vault-arrow" aria-hidden="true"><i className="bx bx-up-right-arrow-alt" aria-hidden="true" /></span>;
 }
 
 const foundations = [
