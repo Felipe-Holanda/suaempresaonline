@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AgencyPreview } from "@/components/business/AgencyPreview";
-import { getProspect, prospects } from "@/lib/prospects";
+import { getProspect, prospects } from "@/prospects";
 
 export function generateStaticParams() {
   return Object.keys(prospects).map((slug) => ({ slug }));

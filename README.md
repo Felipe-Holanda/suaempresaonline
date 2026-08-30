@@ -13,7 +13,7 @@ Abra `http://localhost:3000/preview/agencia-wei`.
 
 ## Adicionar uma prévia
 
-Os dados ficam em `lib/prospects.ts`. O componente visual de cada categoria fica em `components/business`. Consulte [docs/adding-a-prospect.md](docs/adding-a-prospect.md) para o fluxo completo.
+Cada negócio fica isolado em `prospects/[slug]`, enquanto seus ativos ficam em `public/projects/[slug]`. Componentes visuais específicos vivem em `components/business`. Consulte [docs/adding-a-prospect.md](docs/adding-a-prospect.md) para o fluxo completo.
 
 Todas as prévias têm `noindex`, `nofollow` e uma indicação discreta de demonstração. Nenhuma prévia deve inventar depoimentos, preços, métricas, horários ou serviços.
 

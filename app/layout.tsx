@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, IBM_Plex_Mono, Manrope } from "next/font/google";
+import { Barlow_Condensed, IBM_Plex_Mono, Manrope, Syne } from "next/font/google";
 import "./globals.css";
 
 const bodyFont = Manrope({
@@ -23,10 +23,16 @@ const monoFont = IBM_Plex_Mono({
   display: "swap",
 });
 
+const vaultDisplayFont = Syne({
+  subsets: ["latin"],
+  variable: "--font-vault-display",
+  weight: ["600", "700", "800"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Prévia de presença digital",
-  description: "Demonstração visual de presença digital para negócios locais.",
-  robots: { index: false, follow: false },
+  title: "8Vault Solutions",
+  description: "Digitalização, automação e inteligência artificial para empresas locais.",
 };
 
 export const viewport: Viewport = {
@@ -36,7 +42,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
-      <body className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable}`}>{children}</body>
+      <body className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} ${vaultDisplayFont.variable}`}>{children}</body>
     </html>
   );
 }

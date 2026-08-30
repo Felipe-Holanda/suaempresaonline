@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { ProspectBusiness } from "@/lib/prospects";
+import type { ProspectBusiness } from "@/prospects";
 import { Reveal } from "@/components/ui/Reveal";
 
 function Arrow() {
@@ -81,7 +81,7 @@ export function AgencyPreview({ business }: { business: ProspectBusiness }) {
       <section className="identity-stage" id="origem">
         <div className="identity-frame">
           <div className="identity-core">
-            <Image src="/images/wei-logo-oficial.jpg" alt="Identidade visual oficial da Wei com a assinatura make your Wei" fill sizes="(max-width: 767px) 100vw, 92vw" />
+            <Image src="/projects/agencia-wei/wei-logo-oficial.jpg" alt="Identidade visual oficial da Wei com a assinatura make your Wei" fill sizes="(max-width: 767px) 100vw, 92vw" />
           </div>
         </div>
         <Reveal className="identity-caption">

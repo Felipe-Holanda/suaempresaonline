@@ -1,11 +1,11 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import { EightVaultLanding } from "@/components/marketing/EightVaultLanding";
+
+export const metadata: Metadata = {
+  title: "8Vault Solutions | Digitalização e inteligência artificial",
+  description: "Presença digital, automação e inteligência artificial para impulsionar empresas locais.",
+};
 
 export default function Home() {
-  return (
-    <main className="system-page">
-      <p>Motor de prévias locais</p>
-      <h1>Uma demonstração por negócio.</h1>
-      <Link href="/preview/agencia-wei">Abrir prévia da Agência Wei</Link>
-    </main>
-  );
+  return <EightVaultLanding />;
 }
