@@ -87,7 +87,7 @@
 .law-office { display: grid; grid-template-columns: .85fr 1.15fr; background: var(--law-raised); }
 .law-office-mark { position: relative; min-height: 700px; overflow: hidden; background: #050505; }
 .law-office-mark::after { content: ""; position: absolute; inset: 24px; border: 1px solid rgba(191,64,61,.46); pointer-events: none; }
-.law-office-mark img { object-fit: cover; object-position: 76% center; filter: saturate(.72) contrast(1.08); }
+.law-office-mark img { object-fit: contain; object-position: center; padding: 42px; filter: saturate(.72) contrast(1.08); }
 .law-office-copy { min-height: 700px; padding: 120px max(32px,calc((100vw - 1400px)/2)) 90px 9vw; display: flex; flex-direction: column; justify-content: space-between; }
 .law-office h2 { max-width: 680px; color: var(--law-ink); font-size: clamp(4.5rem, 7.3vw, 8rem); line-height: .8; }
 .law-office-copy .scroll-reveal > p:last-child { max-width: 430px; margin: 32px 0 0; color: var(--law-muted); font-size: .84rem; line-height: 1.7; }
