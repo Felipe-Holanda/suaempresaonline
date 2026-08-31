@@ -3,7 +3,7 @@ export type ProspectStatus = "DRAFT" | "READY" | "SENT" | "VIEWED" | "INTERESTED
 export interface ProspectBusiness {
   name: string;
   slug: string;
-  category: "AGENCY" | "AGRO" | "ACCOUNTING" | "LAW" | "EQUIPMENT_RENTAL" | "ARCHITECTURE_ENGINEERING" | "GENERIC";
+  category: "AGENCY" | "AGRO" | "ACCOUNTING" | "LAW" | "EQUIPMENT_RENTAL" | "ARCHITECTURE_ENGINEERING" | "CONSTRUCTION" | "SOLAR_ENGINEERING" | "GENERIC";
   description: string;
   city: string;
   state: string;

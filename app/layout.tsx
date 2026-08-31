@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, Cormorant_Garamond, IBM_Plex_Mono, Manrope, Syne } from "next/font/google";
+import { Archivo, Barlow_Condensed, Cormorant_Garamond, IBM_Plex_Mono, Manrope, Space_Grotesk, Syne } from "next/font/google";
 import "./globals.css";
 
 const bodyFont = Manrope({
@@ -38,6 +38,20 @@ const fradeDisplayFont = Cormorant_Garamond({
   display: "swap",
 });
 
+const constructionFont = Archivo({
+  subsets: ["latin"],
+  variable: "--font-construction",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
+
+const solarDisplayFont = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-solar-display",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "8Vault Solutions",
   description: "Digitalização, automação e inteligência artificial para empresas locais.",
@@ -50,7 +64,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
-      <body className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} ${vaultDisplayFont.variable} ${fradeDisplayFont.variable}`}>{children}</body>
+      <body className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} ${vaultDisplayFont.variable} ${fradeDisplayFont.variable} ${constructionFont.variable} ${solarDisplayFont.variable}`}>{children}</body>
     </html>
   );
 }

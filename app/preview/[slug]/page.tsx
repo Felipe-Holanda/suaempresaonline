@@ -5,6 +5,8 @@ import { AgroPreview } from "@/components/business/AgroPreview";
 import { AccountingPreview } from "@/components/business/AccountingPreview";
 import { LawPreview } from "@/components/business/LawPreview";
 import { EquipmentRentalPreview } from "@/components/business/EquipmentRentalPreview";
+import { ConstructionPreview } from "@/components/business/ConstructionPreview";
+import { SolarEngineeringPreview } from "@/components/business/SolarEngineeringPreview";
 import { getProspect, prospects } from "@/prospects";
 
 export function generateStaticParams() {
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export async function generateViewport({ params }: { params: Promise<{ slug: string }> }): Promise<Viewport> {
   const { slug } = await params;
   const category = getProspect(slug)?.category;
-  return { themeColor: category === "AGRO" ? "#033c22" : category === "ACCOUNTING" ? "#22268f" : category === "LAW" ? "#0a0a0a" : category === "EQUIPMENT_RENTAL" ? "#0a54d1" : "#080808" };
+  return { themeColor: category === "AGRO" ? "#033c22" : category === "ACCOUNTING" ? "#22268f" : category === "LAW" ? "#0a0a0a" : category === "EQUIPMENT_RENTAL" ? "#0a54d1" : category === "CONSTRUCTION" ? "#111716" : category === "SOLAR_ENGINEERING" ? "#05271d" : "#080808" };
 }
 
 export default async function PreviewPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -35,5 +37,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
   if (business.category === "ACCOUNTING") return <AccountingPreview business={business} />;
   if (business.category === "LAW") return <LawPreview business={business} />;
   if (business.category === "EQUIPMENT_RENTAL") return <EquipmentRentalPreview business={business} />;
+  if (business.category === "CONSTRUCTION") return <ConstructionPreview business={business} />;
+  if (business.category === "SOLAR_ENGINEERING") return <SolarEngineeringPreview business={business} />;
   return <AgencyPreview business={business} />;
 }
